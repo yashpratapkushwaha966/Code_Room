@@ -358,10 +358,7 @@ function EditProfileModal({ tab, setTab, user, updateProfile, onClose, onSaved }
     setPasswordSaving(true);
     try {
       await changePasswordRequest({ currentPassword, newPassword });
-      setPasswordSuccess("Password updated.");
-      setCurrentPassword("");
-      setNewPassword("");
-      setConfirmPassword("");
+      onSaved("Password updated successfully!");
     } catch (err) {
       setPasswordError(err.message || "Could not update your password.");
     } finally {
