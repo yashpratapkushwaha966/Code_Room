@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  @apply text-ink font-sans antialiased;
+  background:
+    radial-gradient(900px 500px at 50% -120px, rgba(34,227,208,.14), transparent 70%),
+    radial-gradient(700px 400px at 100% 60%, rgba(14,124,123,.18), transparent 70%),
+    #040A0C;
+  background-attachment: fixed;
+}
+
+h1, h2, h3, .font-display { font-family: "Outfit", system-ui, sans-serif; }
+
+::selection { background: rgba(34,227,208,.35); color: #fff; }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
